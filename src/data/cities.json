@@ -1,0 +1,578 @@
+[
+  {
+    "name": "Paris",
+    "postalCode": "75000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Marseille",
+    "postalCode": "13000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Lyon",
+    "postalCode": "69000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Toulouse",
+    "postalCode": "31000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Nice",
+    "postalCode": "06000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Nantes",
+    "postalCode": "44000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Strasbourg",
+    "postalCode": "67000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Montpellier",
+    "postalCode": "34000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Bordeaux",
+    "postalCode": "33000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Lille",
+    "postalCode": "59000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Rennes",
+    "postalCode": "35000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Reims",
+    "postalCode": "51100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Le Havre",
+    "postalCode": "76600",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Saint-Étienne",
+    "postalCode": "42000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Toulon",
+    "postalCode": "83000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Grenoble",
+    "postalCode": "38000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Dijon",
+    "postalCode": "21000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Angers",
+    "postalCode": "49000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Nîmes",
+    "postalCode": "30000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Villeurbanne",
+    "postalCode": "69100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Le Mans",
+    "postalCode": "72000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Aix-en-Provence",
+    "postalCode": "13100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Clermont-Ferrand",
+    "postalCode": "63000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Brest",
+    "postalCode": "29200",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Tours",
+    "postalCode": "37000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Limoges",
+    "postalCode": "87000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Amiens",
+    "postalCode": "80000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Perpignan",
+    "postalCode": "66000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Metz",
+    "postalCode": "57000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Besançon",
+    "postalCode": "25000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Boulogne-Billancourt",
+    "postalCode": "92100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Orléans",
+    "postalCode": "45000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Mulhouse",
+    "postalCode": "68100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Rouen",
+    "postalCode": "76000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Caen",
+    "postalCode": "14000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Nancy",
+    "postalCode": "54000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Argenteuil",
+    "postalCode": "95100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Montreuil",
+    "postalCode": "93100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Roubaix",
+    "postalCode": "59100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Tourcoing",
+    "postalCode": "59200",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Nanterre",
+    "postalCode": "92000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Avignon",
+    "postalCode": "84000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Vitry-sur-Seine",
+    "postalCode": "94400",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Créteil",
+    "postalCode": "94000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Dunkerque",
+    "postalCode": "59140",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Poitiers",
+    "postalCode": "86000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Asnières-sur-Seine",
+    "postalCode": "92600",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Courbevoie",
+    "postalCode": "92400",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Versailles",
+    "postalCode": "78000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Colombes",
+    "postalCode": "92700",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Fort-de-France",
+    "postalCode": "97200",
+    "timezone": "America/Martinique",
+    "country": "France"
+  },
+  {
+    "name": "Aulnay-sous-Bois",
+    "postalCode": "93600",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Saint-Pierre",
+    "postalCode": "97410",
+    "timezone": "Indian/Reunion",
+    "country": "France"
+  },
+  {
+    "name": "Rueil-Malmaison",
+    "postalCode": "92500",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Pau",
+    "postalCode": "64000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Aubervilliers",
+    "postalCode": "93300",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Le Tampon",
+    "postalCode": "97430",
+    "timezone": "Indian/Reunion",
+    "country": "France"
+  },
+  {
+    "name": "Champigny-sur-Marne",
+    "postalCode": "94500",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Antibes",
+    "postalCode": "06600",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "La Rochelle",
+    "postalCode": "17000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Saint-Maur-des-Fossés",
+    "postalCode": "94100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Calais",
+    "postalCode": "62100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Cannes",
+    "postalCode": "06400",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Béziers",
+    "postalCode": "34500",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Colmar",
+    "postalCode": "68000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Bourges",
+    "postalCode": "18000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Saint-Nazaire",
+    "postalCode": "44600",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Quimper",
+    "postalCode": "29000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Valence",
+    "postalCode": "26000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Mérignac",
+    "postalCode": "33700",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Drancy",
+    "postalCode": "93700",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Ajaccio",
+    "postalCode": "20000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Levallois-Perret",
+    "postalCode": "92300",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Troyes",
+    "postalCode": "10000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Neuilly-sur-Seine",
+    "postalCode": "92200",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Antony",
+    "postalCode": "92160",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Sarcelles",
+    "postalCode": "95200",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Cergy",
+    "postalCode": "95000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Issy-les-Moulineaux",
+    "postalCode": "92130",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Noisy-le-Grand",
+    "postalCode": "93160",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Évry",
+    "postalCode": "91000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Vénissieux",
+    "postalCode": "69200",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Clichy",
+    "postalCode": "92110",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Lorient",
+    "postalCode": "56100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Chambéry",
+    "postalCode": "73000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Pessac",
+    "postalCode": "33600",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Saint-André",
+    "postalCode": "97440",
+    "timezone": "Indian/Reunion",
+    "country": "France"
+  },
+  {
+    "name": "Ivry-sur-Seine",
+    "postalCode": "94200",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Montauban",
+    "postalCode": "82000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Cagnes-sur-Mer",
+    "postalCode": "06800",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Niort",
+    "postalCode": "79000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Villejuif",
+    "postalCode": "94800",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Saint-Quentin",
+    "postalCode": "02100",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Hyères",
+    "postalCode": "83400",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Beauvais",
+    "postalCode": "60000",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  },
+  {
+    "name": "Cholet",
+    "postalCode": "49300",
+    "timezone": "Europe/Paris",
+    "country": "France"
+  }
+]
