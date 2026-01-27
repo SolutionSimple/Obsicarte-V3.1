@@ -19,6 +19,31 @@ export const fadeInUp: Variants = {
   exit: { opacity: 0, y: 20 },
 };
 
+export const fadeInSlow: Variants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+  exit: { opacity: 0 },
+};
+
+export const fadeInUpSlow: Variants = {
+  initial: { opacity: 0, y: 30 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.5,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+  exit: { opacity: 0, y: 30 },
+};
+
 export const fadeInDown: Variants = {
   initial: { opacity: 0, y: -20 },
   animate: {
@@ -77,6 +102,16 @@ export const staggerContainer: Variants = {
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.1,
+    },
+  },
+};
+
+export const staggerContainerSlow: Variants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
     },
   },
 };

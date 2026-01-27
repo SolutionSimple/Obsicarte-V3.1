@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 interface CardProps {
   children: ReactNode;
-  variant?: 'default' | 'premium' | 'glassmorphism';
+  variant?: 'default' | 'premium' | 'glassmorphism' | 'dark-premium';
   hover?: boolean;
   className?: string;
   onClick?: () => void;
@@ -26,6 +26,8 @@ export function Card({
       'bg-gradient-to-br from-white to-neutral-50 border border-amber-200 shadow-premium-md relative before:absolute before:inset-0 before:rounded-xl before:p-[1px] before:bg-gradient-amber before:-z-10',
     glassmorphism:
       'bg-white/70 backdrop-blur-md border border-white/20 shadow-premium-lg',
+    'dark-premium':
+      'bg-gradient-to-br from-neutral-900 to-black border border-gold-500/20 shadow-gold-md hover:border-gold-500/40 hover:shadow-gold-glow transition-all duration-300',
   };
 
   const Component = hover ? motion.div : 'div';
