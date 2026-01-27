@@ -32,10 +32,10 @@ export const BlackCardSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-black via-neutral-950 to-black overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-spotlight opacity-30" />
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-100 via-beige-50 to-warmGray-100 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-radial from-gold-400/15 via-transparent to-transparent opacity-50" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-gold-500/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-gold-500/20 to-transparent rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -44,10 +44,10 @@ export const BlackCardSection = () => {
           transition={{ duration: 1.2 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-bold text-gold-700 mb-6 tracking-tight">
             La carte noire premium
           </h2>
-          <p className="text-xl md:text-2xl text-warmGray-300 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-warmGray-700 max-w-3xl mx-auto">
             Une carte qui fait la différence
           </p>
         </motion.div>
@@ -79,10 +79,10 @@ export const BlackCardSection = () => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-2">
+                        <h3 className="text-xl font-bold text-warmGray-900 mb-2">
                           {feature.title}
                         </h3>
-                        <p className="text-warmGray-400">
+                        <p className="text-warmGray-700">
                           {feature.description}
                         </p>
                       </div>
@@ -100,10 +100,10 @@ export const BlackCardSection = () => {
           transition={{ duration: 1.2, delay: 0.8 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 text-gold-400 text-lg">
-            <div className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 text-gold-700 text-lg font-semibold">
+            <div className="w-2 h-2 rounded-full bg-gold-500 shadow-gold-glow animate-pulse" />
             <span>Édition limitée - Commandez la vôtre maintenant</span>
-            <div className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-gold-500 shadow-gold-glow animate-pulse" />
           </div>
         </motion.div>
       </div>

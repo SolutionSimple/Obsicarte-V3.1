@@ -29,7 +29,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-neutral-900 border-t border-gold-500/20">
+    <footer className="bg-warmGray-800 border-t border-gold-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
           <div className="col-span-2 md:col-span-1">
@@ -41,25 +41,25 @@ export function Footer() {
                 Obsi
               </motion.h2>
             </Link>
-            <p className="text-warmGray-400 text-sm mb-4">
+            <p className="text-warmGray-300 text-sm mb-4">
               Carte de visite noire premium avec QR code et carte NFC pré-configurée.
             </p>
             <div className="space-y-2">
               <a
                 href="mailto:contact@obsi.fr"
-                className="flex items-center gap-2 text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
+                className="flex items-center gap-2 text-warmGray-300 hover:text-gold-400 transition-colors text-sm"
               >
                 <Mail className="w-4 h-4" />
                 contact@obsi.fr
               </a>
               <a
                 href="tel:+33123456789"
-                className="flex items-center gap-2 text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
+                className="flex items-center gap-2 text-warmGray-300 hover:text-gold-400 transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
                 +33 1 23 45 67 89
               </a>
-              <div className="flex items-center gap-2 text-warmGray-400 text-sm">
+              <div className="flex items-center gap-2 text-warmGray-300 text-sm">
                 <MapPin className="w-4 h-4" />
                 Paris, France
               </div>
@@ -73,7 +73,7 @@ export function Footer() {
                 <li key={`product-${index}`}>
                   <Link
                     to={link.href}
-                    className="text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
+                    className="text-warmGray-300 hover:text-gold-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -89,7 +89,7 @@ export function Footer() {
                 <li key={`resources-${index}`}>
                   <Link
                     to={link.href}
-                    className="text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
+                    className="text-warmGray-300 hover:text-gold-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -105,7 +105,7 @@ export function Footer() {
                 <li key={`company-${index}`}>
                   <Link
                     to={link.href}
-                    className="text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
+                    className="text-warmGray-300 hover:text-gold-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -121,7 +121,7 @@ export function Footer() {
                 <li key={`legal-${index}`}>
                   <Link
                     to={link.href}
-                    className="text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
+                    className="text-warmGray-300 hover:text-gold-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -131,21 +131,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-gold-500/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-warmGray-500 text-sm text-center md:text-left">
+        <div className="pt-8 border-t border-gold-500/30 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-warmGray-400 text-sm text-center md:text-left">
             © 2025 Obsi. Tous droits réservés.
           </p>
           <div className="flex items-center gap-4">
             <Link
               to="/#"
-              className="text-warmGray-500 hover:text-gold-400 transition-colors text-sm"
+              className="text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
             >
               Politique de confidentialité
             </Link>
-            <span className="text-gold-500/30">•</span>
+            <span className="text-gold-500/40">•</span>
             <Link
               to="/#"
-              className="text-warmGray-500 hover:text-gold-400 transition-colors text-sm"
+              className="text-warmGray-400 hover:text-gold-400 transition-colors text-sm"
             >
               Conditions d'utilisation
             </Link>

@@ -8,7 +8,7 @@ export const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 100, damping: 20, duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-gold-500/20"
+      className="fixed top-0 left-0 right-0 z-50 navbar-glass"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -18,10 +18,10 @@ export const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 400 }}
             >
-              <h1 className="text-3xl font-bold bg-gradient-gold-shimmer bg-clip-text text-transparent tracking-tight">
+              <h1 className="text-3xl font-bold text-gold-gradient tracking-tight">
                 Obsi
               </h1>
-              <div className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-gold-500 shadow-gold-glow animate-pulse" />
             </motion.div>
           </Link>
 

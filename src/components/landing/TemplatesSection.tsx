@@ -67,11 +67,11 @@ export const TemplatesSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-black via-neutral-950 to-black">
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-red-500/10 rounded-full blur-3xl" />
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-100 via-beige-100 to-warmGray-100">
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-red-500/15 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,10 +81,10 @@ export const TemplatesSection = () => {
           transition={{ duration: 1.2 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-bold text-gold-700 mb-6 tracking-tight">
             Une carte pour tous les professionnels
           </h2>
-          <p className="text-xl md:text-2xl text-warmGray-300 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-warmGray-700 max-w-3xl mx-auto">
             Des exemples d'utilisation, infinies possibilités
           </p>
         </motion.div>
@@ -109,17 +109,17 @@ export const TemplatesSection = () => {
                       {template.title}
                     </div>
 
-                    <h3 className="text-lg font-bold text-white mb-2">
+                    <h3 className="text-lg font-bold text-warmGray-900 mb-2">
                       {template.subtitle}
                     </h3>
-                    <p className="text-warmGray-400 text-sm mb-4">
+                    <p className="text-warmGray-700 text-sm mb-4">
                       {template.description}
                     </p>
 
                     <ul className="space-y-2">
                       {template.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-warmGray-300 text-sm">
-                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${template.color} mr-2`} />
+                        <li key={feature} className="flex items-center text-warmGray-800 text-sm">
+                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${template.color} mr-2 shadow-sm`} />
                           {feature}
                         </li>
                       ))}
@@ -137,7 +137,7 @@ export const TemplatesSection = () => {
           transition={{ delay: 1, duration: 1 }}
           className="text-center mt-12"
         >
-          <p className="text-warmGray-400 text-lg">
+          <p className="text-warmGray-600 text-lg">
             Et bien plus encore : freelances, consultants, artisans, associations...
           </p>
         </motion.div>

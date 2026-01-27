@@ -47,6 +47,16 @@
   --destructive-foreground: #ffffff;
   --sidebar-accent-foreground: #343434;
   --sidebar-primary-foreground: #fbfbfb;
+
+  --beige-bg: #fdfbf7;
+  --beige-light: #f9f5ed;
+  --beige-medium: #f2e8d9;
+  --beige-dark: #e8d9c3;
+  --gold-text: #a16207;
+  --gold-accent: #ca8a04;
+  --gold-light: #eab308;
+  --glass-bg: rgba(250, 248, 245, 0.8);
+  --glass-border: rgba(234, 179, 8, 0.2);
 }
 
 .dark {
@@ -129,4 +139,31 @@
   --color-destructive-foreground: var(--destructive-foreground);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+}
+
+@layer utilities {
+  .navbar-glass {
+    background: linear-gradient(180deg, rgba(250, 248, 245, 0.95) 0%, rgba(250, 248, 245, 0.85) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.5),
+      0 1px 3px 0 rgba(0, 0, 0, 0.05),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(234, 179, 8, 0.15);
+  }
+
+  .glass-effect {
+    background: rgba(250, 248, 245, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(234, 179, 8, 0.2);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #ca8a04 0%, #eab308 50%, #fde047 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }

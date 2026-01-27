@@ -28,8 +28,8 @@ export const HowItWorksSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-black">
-      <div className="absolute inset-0 bg-gradient-spotlight opacity-20" />
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-beige-100 via-warmGray-50 to-beige-50">
+      <div className="absolute inset-0 bg-gradient-radial from-gold-400/10 via-transparent to-transparent opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -38,10 +38,10 @@ export const HowItWorksSection = () => {
           transition={{ duration: 1.2 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-bold text-gold-700 mb-6 tracking-tight">
             Comment ça marche ?
           </h2>
-          <p className="text-xl md:text-2xl text-warmGray-300">
+          <p className="text-xl md:text-2xl text-warmGray-700">
             En 3 étapes simples
           </p>
         </motion.div>
@@ -73,31 +73,31 @@ export const HowItWorksSection = () => {
                         isEven ? 'md:flex-row-reverse' : ''
                       }`}
                     >
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-gold-glow text-2xl font-bold text-black">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-gold-glow text-2xl font-bold text-white">
                         {step.num}
                       </div>
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-neutral-900 to-black border border-gold-500/30 flex items-center justify-center">
-                        <Icon className="w-8 h-8 text-gold-400" />
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-warmGray-100 to-beige-100 border border-gold-500/40 flex items-center justify-center shadow-gold-sm">
+                        <Icon className="w-8 h-8 text-gold-600" />
                       </div>
                     </motion.div>
 
-                    <h3 className="text-3xl font-bold text-white mb-4">
+                    <h3 className="text-3xl font-bold text-warmGray-900 mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-lg text-warmGray-300 leading-relaxed">
+                    <p className="text-lg text-warmGray-700 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
 
                   <div className={`${isEven ? 'md:col-start-2' : 'md:col-start-1 md:row-start-1'}`}>
                     <div className="relative">
-                      <div className="aspect-square rounded-3xl bg-gradient-to-br from-neutral-900 to-black border border-gold-500/20 shadow-gold-md overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-spotlight opacity-20" />
+                      <div className="aspect-square rounded-3xl bg-gradient-to-br from-warmGray-100 to-beige-100 border border-gold-500/30 shadow-gold-md overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-radial from-gold-400/10 to-transparent opacity-30" />
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <Icon className="w-32 h-32 text-gold-500/30" />
+                          <Icon className="w-32 h-32 text-gold-500/40" />
                         </div>
                       </div>
-                      <div className="absolute -z-10 inset-0 bg-gradient-to-br from-gold-500/20 to-transparent blur-3xl" />
+                      <div className="absolute -z-10 inset-0 bg-gradient-to-br from-gold-500/30 to-transparent blur-3xl" />
                     </div>
                   </div>
                 </motion.div>

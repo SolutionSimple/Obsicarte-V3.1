@@ -9,7 +9,7 @@ import { Footer } from '../components/Footer';
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gradient-beige-radial">
       <Navbar />
 
       <main>
