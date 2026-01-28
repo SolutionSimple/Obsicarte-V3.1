@@ -102,7 +102,7 @@ export const BlackCardSection = () => {
         >
           <div className="inline-flex items-center gap-2 text-gold-700 text-lg font-semibold">
             <div className="w-2 h-2 rounded-full bg-gold-500 shadow-gold-glow animate-pulse" />
-            <span>Édition limitée - Commandez la vôtre maintenant</span>
+            <span>Commandez la vôtre maintenant</span>
             <div className="w-2 h-2 rounded-full bg-gold-500 shadow-gold-glow animate-pulse" />
           </div>
         </motion.div>
