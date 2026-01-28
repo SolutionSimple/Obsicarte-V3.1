@@ -17,7 +17,7 @@ export const BlackCardSection = () => {
     {
       icon: Zap,
       title: 'Puce NFC intégrée',
-      description: 'Pour facilité les échanges de coordonées,
+      description: 'Pour facilité les échanges de coordonées',
     },
     {
       icon: Shield,
