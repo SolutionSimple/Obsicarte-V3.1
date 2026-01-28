@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Wifi } from 'lucide-react';
 import { useState } from 'react';
 import QRCode from 'react-qr-code';
-import obsiLogo from '../assets/avec_texte_no_bk copy.png';
+import obsiLogo from '../assets/or_avec_texte_no_bk-removebg-preview.png';
 
 export const BlackCard3D = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -82,7 +82,8 @@ export const BlackCard3D = () => {
                     alt="OBSI - une Carte, un Geste, un Lien"
                     className="w-72 h-auto object-contain relative z-10"
                     style={{
-                      filter: 'drop-shadow(0 0 20px rgba(202, 138, 4, 0.5)) drop-shadow(0 0 40px rgba(202, 138, 4, 0.3))'
+                      filter: 'drop-shadow(0 0 20px rgba(202, 138, 4, 0.5)) drop-shadow(0 0 40px rgba(202, 138, 4, 0.3))',
+                      backgroundColor: 'transparent'
                     }}
                   />
                 </div>
