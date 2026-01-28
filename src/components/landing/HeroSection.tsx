@@ -64,7 +64,7 @@ export const HeroSection = () => {
                   whileTap={{ scale: 0.98 }}
                   className="px-10 py-4 bg-black text-white border-2 border-gold-500 rounded-lg text-lg font-medium shadow-gold-glow-lg hover:bg-neutral-900 transition-all duration-300"
                 >
-                  Commander ma carte noire
+                  Commander mon Obsi Carte
                 </motion.button>
               </Link>
               <Link to="/login">
