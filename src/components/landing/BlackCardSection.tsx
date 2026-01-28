@@ -20,7 +20,7 @@ export const BlackCardSection = () => {
       description: 'Pour facilité les échanges de coordonées',
     },
     {
-      icon: Shield,
+      icon: Camera,
       title: 'Description vidéo',
       description: 'Soyez pertinent et mémorable aux yeux de votre réseau',
     },
