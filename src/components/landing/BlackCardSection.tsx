@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { BlackCard3D } from '../BlackCard3D';
 import { Card } from '../Card';
-import { Sparkles, Camera, Zap, Ban as Van } from 'lucide-react';
+import { Sparkles, Camera, Zap, Truck } from 'lucide-react';
 import { fadeInUpSlow, staggerContainerSlow, staggerItem } from '../../utils/animations';
 
 export const BlackCardSection = () => {
@@ -25,7 +25,7 @@ export const BlackCardSection = () => {
       description: 'Soyez pertinent et mémorable aux yeux de votre réseau',
     },
     {
-      icon: Van,
+      icon: Truck,
       title: 'Livrée chez vous',
       description: 'livraison sous 72h maximum',
     },
