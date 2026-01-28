@@ -126,6 +126,36 @@ Deno.serve(async (req: Request) => {
         throw cardsError;
       }
 
+      const { data: existingUser } = await supabase.auth.admin.getUserByEmail(customerEmail);
+
+      if (existingUser?.user) {
+        const userId = existingUser.user.id;
+
+        const { error: subError } = await supabase.rpc('create_subscription_from_card', {
+          p_user_id: userId,
+          p_card_tier: tier,
+          p_stripe_customer_id: paymentIntent.customer,
+          p_duration_months: 12
+        });
+
+        if (subError) {
+          console.error('Error creating subscription:', subError);
+        } else {
+          console.log(`Created subscription for user ${userId} with tier ${tier}`);
+        }
+
+        const { error: updateOrderError } = await supabase
+          .from('orders')
+          .update({ user_id: userId })
+          .eq('id', order.id);
+
+        if (updateOrderError) {
+          console.error('Error updating order with user_id:', updateOrderError);
+        }
+      } else {
+        console.log(`User with email ${customerEmail} not found - subscription will be created after signup`);
+      }
+
       console.log(`Created order ${orderNumber} with ${quantity} cards`);
     }
 

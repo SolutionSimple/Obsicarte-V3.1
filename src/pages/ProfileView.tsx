@@ -5,17 +5,20 @@ import { supabase } from '../lib/supabase';
 import type { Profile } from '../types/database.types';
 import { CardPreview3D } from '../components/CardPreview3D';
 import { ProfileSection } from '../components/ProfileSection';
-import { ContactCard } from '../components/ContactCard';
 import { SocialButton } from '../components/SocialButton';
-import { VideoPlayer } from '../components/VideoPlayer';
 import { HeroSection } from '../components/profile-view/HeroSection';
 import { ProfileActions } from '../components/profile-view/ProfileActions';
+import { TierBanner } from '../components/profile-view/TierBanner';
+import { ContactSection } from '../components/profile-view/ContactSection';
+import { VideoSection } from '../components/profile-view/VideoSection';
 import { SEO } from '../components/SEO';
 import { ProfileViewSkeleton } from '../components/Skeleton';
 import { downloadVCard } from '../utils/vcard';
 import { trackEvent, incrementViewCount } from '../utils/analytics';
 import { useToast } from '../contexts/ToastContext';
-import { Mail, Phone, Globe, MapPin, CreditCard, Globe2, Share2 } from 'lucide-react';
+import { CreditCard, Globe2, Share2 } from 'lucide-react';
+import { TierType, SUBSCRIPTION_TO_CARD_TIER, getTierBorderClass } from '../config/tier-config';
+import type { SubscriptionTier } from '../config/tier-config';
 
 export function ProfileView() {
   const { username } = useParams<{ username: string }>();
@@ -23,6 +26,7 @@ export function ProfileView() {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState<'web' | 'card'>('web');
+  const [tier, setTier] = useState<TierType | null>(null);
 
   useEffect(() => {
     async function fetchProfile() {
@@ -47,6 +51,11 @@ export function ProfileView() {
 
         if (data) {
           setProfile(data);
+
+          const subscriptionTier = (data.subscription_tier || 'free') as SubscriptionTier;
+          const cardTier = SUBSCRIPTION_TO_CARD_TIER[subscriptionTier];
+          setTier(cardTier);
+
           trackEvent(data.id, 'view').catch(console.warn);
           incrementViewCount(data.id).catch(console.warn);
         }
@@ -218,8 +227,10 @@ export function ProfileView() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-xl"
+              className={`bg-white border-2 ${getTierBorderClass(tier)} rounded-2xl overflow-hidden shadow-xl`}
             >
+              {tier && <TierBanner tier={tier} className="border-b border-neutral-100" />}
+
               <HeroSection
                 fullName={profile.full_name}
                 title={profile.title || undefined}
@@ -243,59 +254,13 @@ export function ProfileView() {
                   </ProfileSection>
                 )}
 
-                {profile.location_city && (
-                  <ProfileSection delay={0.2}>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <ContactCard
-                        icon={MapPin}
-                        label="Localisation"
-                        value={`${profile.location_city}, ${profile.location_country || 'France'}`}
-                      />
-                      {profile.email && (
-                        <ContactCard
-                          icon={Mail}
-                          label="Email"
-                          value={profile.email}
-                          href={`mailto:${profile.email}`}
-                          onClick={() => trackEvent(profile.id, 'link_click', { type: 'email' }).catch(console.warn)}
-                        />
-                      )}
-                    </div>
-                  </ProfileSection>
-                )}
+                <VideoSection profile={profile} tier={tier} />
 
-                {profile.video_url && profile.video_thumbnail_url && (
-                  <ProfileSection delay={0.3}>
-                    <VideoPlayer
-                      videoUrl={profile.video_url}
-                      thumbnailUrl={profile.video_thumbnail_url}
-                      duration={profile.video_duration || 0}
-                    />
-                  </ProfileSection>
-                )}
-
-                <ProfileSection delay={0.4}>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {profile.phone && (
-                      <ContactCard
-                        icon={Phone}
-                        label="Téléphone"
-                        value={profile.phone}
-                        href={`tel:${profile.phone}`}
-                        onClick={() => trackEvent(profile.id, 'link_click', { type: 'phone' }).catch(console.warn)}
-                      />
-                    )}
-                    {profile.website && (
-                      <ContactCard
-                        icon={Globe}
-                        label="Site web"
-                        value={profile.website}
-                        href={profile.website}
-                        onClick={() => trackEvent(profile.id, 'link_click', { type: 'website' }).catch(console.warn)}
-                      />
-                    )}
-                  </div>
-                </ProfileSection>
+                <ContactSection
+                  profile={profile}
+                  tier={tier}
+                  onLinkClick={(type) => trackEvent(profile.id, 'link_click', { type }).catch(console.warn)}
+                />
 
                 {profile.social_links && Object.keys(profile.social_links).length > 0 && (
                   <ProfileSection delay={0.5}>

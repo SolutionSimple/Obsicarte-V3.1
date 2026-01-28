@@ -1,11 +1,14 @@
 import { useState, FormEvent, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useProfile } from '../hooks/useProfile';
+import { useTierPermissions } from '../hooks/useTierPermissions';
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 import { TemplateSelectorStep } from '../components/TemplateSelectorStep';
+import { TierBadge } from '../components/TierBadge';
 import type { ProfileTemplate } from '../types/custom-fields.types';
-import { Sparkles, ArrowLeft, CheckCircle } from 'lucide-react';
+import { Sparkles, ArrowLeft, CheckCircle, Crown } from 'lucide-react';
+import { TierType, getTierConfig } from '../config/tier-config';
 
 export function Onboarding() {
   const [searchParams] = useSearchParams();
@@ -19,13 +22,16 @@ export function Onboarding() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [fromActivation, setFromActivation] = useState(false);
+  const [userTier, setUserTier] = useState<TierType | null>(null);
   const { createProfile } = useProfile();
+  const { tier, config } = useTierPermissions();
   const navigate = useNavigate();
 
   useEffect(() => {
     const emailParam = searchParams.get('email');
     const nameParam = searchParams.get('name');
     const phoneParam = searchParams.get('phone');
+    const tierParam = searchParams.get('tier') as TierType | null;
 
     if (emailParam) {
       setEmail(emailParam);
@@ -37,7 +43,15 @@ export function Onboarding() {
     if (phoneParam) {
       setPhone(phoneParam);
     }
-  }, [searchParams]);
+
+    if (tierParam && ['roc', 'saphir', 'emeraude'].includes(tierParam)) {
+      setUserTier(tierParam);
+    } else if (tier) {
+      setUserTier(tier);
+    } else {
+      setUserTier('roc');
+    }
+  }, [searchParams, tier]);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -82,9 +96,31 @@ export function Onboarding() {
   }
 
   if (step === 'template') {
+    const tierConfig = userTier ? getTierConfig(userTier) : null;
+
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-warmGray-100 px-4 py-12">
         <div className="max-w-4xl w-full bg-white rounded-2xl shadow-xl p-8">
+          {userTier && tierConfig && (
+            <div className="mb-6 p-6 bg-gradient-to-br from-gold-50 to-amber-50 border border-gold-200 rounded-xl">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Crown className="w-6 h-6 text-gold-600" />
+                <h2 className="text-xl font-bold text-warmGray-900">Bienvenue dans votre</h2>
+                <TierBadge tier={userTier} variant="large" />
+              </div>
+              <p className="text-center text-warmGray-700 text-sm">
+                Vous avez accès à toutes les fonctionnalités premium de votre pack
+              </p>
+              <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+                {tierConfig.description.slice(0, 3).map((feature, index) => (
+                  <span key={index} className="text-xs bg-white px-3 py-1 rounded-full text-warmGray-600 border border-gold-200">
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
               <Sparkles className="w-8 h-8 text-blue-600" />

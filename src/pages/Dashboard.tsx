@@ -3,12 +3,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useProfile } from '../hooks/useProfile';
 import { useAnalytics } from '../hooks/useAnalytics';
+import { useTierPermissions } from '../hooks/useTierPermissions';
 import { useAuth } from '../contexts/AuthContext';
 import { Button } from '../components/Button';
 import { Card, CardContent } from '../components/Card';
 import { ContextualLink } from '../components/ContextualLink';
 import { CardPreview3D } from '../components/CardPreview3D';
 import { AnimatedCounter } from '../components/AnimatedCounter';
+import { SubscriptionCard } from '../components/dashboard/SubscriptionCard';
+import { UpgradePrompt } from '../components/UpgradePrompt';
 import QRCode from 'react-qr-code';
 import { Edit, Download, Eye, Share2, LogOut, BarChart3, Nfc, ChevronDown, ChevronUp, TrendingUp, Users, MousePointerClick, Lightbulb, Sparkles } from 'lucide-react';
 import { fadeInUp, staggerContainer, staggerItem } from '../utils/animations';
@@ -17,6 +20,7 @@ export function Dashboard() {
   const { profile, loading } = useProfile();
   const { analytics } = useAnalytics(profile?.id);
   const { signOut } = useAuth();
+  const { canUpgrade } = useTierPermissions();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -233,9 +237,19 @@ export function Dashboard() {
                 </CardContent>
               </Card>
             </motion.div>
+
+            {canUpgrade && (
+              <motion.div variants={staggerItem}>
+                <UpgradePrompt />
+              </motion.div>
+            )}
           </div>
 
           <div className="space-y-6">
+            <motion.div variants={staggerItem}>
+              <SubscriptionCard />
+            </motion.div>
+
             <motion.div variants={staggerItem}>
               <Card variant="default" className="bg-white border-neutral-200">
                 <CardContent>
