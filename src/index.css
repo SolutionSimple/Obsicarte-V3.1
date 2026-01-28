@@ -174,4 +174,57 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .card-runway-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  .card-runway-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 30%,
+      rgba(0, 0, 0, 0.15) 70%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+  }
+
+  .card-runway-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: radial-gradient(
+      ellipse 80% 60% at 50% 45%,
+      rgba(234, 179, 8, 0.08) 0%,
+      transparent 60%
+    );
+    animation: golden-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes golden-pulse {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
+
+  .shadow-gold-glow {
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.5);
+  }
+
+  .shadow-gold-glow-lg {
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.6);
+  }
 }

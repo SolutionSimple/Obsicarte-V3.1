@@ -85,8 +85,10 @@ export const HeroSection = () => {
             transition={{ delay: 1.4, duration: 1.2 }}
             className="flex items-center justify-center"
           >
-            <div className="w-full max-w-md lg:max-w-lg">
-              <CardRunwayAnimation />
+            <div className="relative w-full max-w-md lg:max-w-lg">
+              <div className="card-runway-frame">
+                <CardRunwayAnimation />
+              </div>
             </div>
           </motion.div>
         </div>
