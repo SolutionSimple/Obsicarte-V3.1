@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Gem, Check, CreditCard, Palette, X } from 'lucide-react';
+import { Gem, Check, X } from 'lucide-react';
 import { Card, CardContent } from '../Card';
 import { Button } from '../Button';
 import { staggerContainerSlow, staggerItem } from '../../utils/animations';
@@ -37,7 +37,7 @@ export const PricingSection = () => {
       ],
       highlighted: true,
       recommended: true,
-      color: 'from-[#0F52BA] to-[#0a3a8a]',
+      color: 'from-[#3B82F6] to-[#2563EB]',
     },
     {
       name: 'Pack Emeraude',
@@ -60,12 +60,10 @@ export const PricingSection = () => {
     {
       name: 'Carte de Remplacement',
       price: '29,90',
-      icon: CreditCard,
     },
     {
       name: 'Personnalisation couleur Métal',
       price: '+10',
-      icon: Palette,
     },
   ];
 
@@ -115,7 +113,7 @@ export const PricingSection = () => {
                   variant="dark-premium"
                   className={`relative ${
                     plan.highlighted
-                      ? 'ring-2 ring-[#0F52BA]/50 shadow-xl transform scale-105'
+                      ? 'ring-2 ring-[#3B82F6]/50 shadow-xl transform scale-105'
                       : ''
                   }`}
                 >
@@ -131,7 +129,7 @@ export const PricingSection = () => {
 
                     <div className="text-center mb-6">
                       <div className="flex items-baseline justify-center gap-1">
-                        <span className="text-5xl font-bold text-gold-700">
+                        <span className="text-5xl font-bold text-gold-400">
                           {plan.price}
                         </span>
                         <span className="text-xl text-warmGray-300">€</span>
@@ -176,7 +174,7 @@ export const PricingSection = () => {
                       <th className="text-center p-4 md:p-6 font-semibold text-warmGray-200 bg-neutral-800/30">
                         Pack Roc
                       </th>
-                      <th className="text-center p-4 md:p-6 font-semibold text-[#0F52BA] bg-[#0F52BA]/20">
+                      <th className="text-center p-4 md:p-6 font-semibold text-[#3B82F6] bg-[#3B82F6]/20">
                         Pack Saphir
                       </th>
                       <th className="text-center p-4 md:p-6 font-semibold text-emerald-400 bg-emerald-900/20">
@@ -478,27 +476,20 @@ export const PricingSection = () => {
 
           <div className="grid md:grid-cols-2 gap-6">
             {additionalServices.map((service) => {
-              const Icon = service.icon;
-
               return (
                 <Card
                   key={service.name}
-                  variant="glassmorphism-dark"
+                  variant="dark-premium"
                   className="transition-all duration-300 hover:shadow-gold-glow"
                 >
                   <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-warmGray-50 mb-1">
-                          {service.name}
-                        </h4>
-                        <p className="text-2xl font-bold text-gold-700">
-                          {service.price}€
-                        </p>
-                      </div>
+                    <div className="flex flex-col items-center justify-center text-center">
+                      <h4 className="font-semibold text-warmGray-50 mb-2">
+                        {service.name}
+                      </h4>
+                      <p className="text-2xl font-bold text-gold-400">
+                        {service.price}€
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
