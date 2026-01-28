@@ -46,7 +46,7 @@ export const HeroSection = () => {
           >
             <Wifi className="w-4 h-4 text-gold-600 animate-pulse" />
             <span className="text-gold-700 text-sm font-semibold tracking-wide">
-              Carte Noire NFC Premium
+              Creez un reseau avec classe
             </span>
           </motion.div>
 
@@ -56,7 +56,7 @@ export const HeroSection = () => {
             animate="animate"
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-gold-700 mb-8 tracking-tighter"
           >
-            Une carte noire.
+            Une carte, un geste, un lien
             <motion.span
               className="block bg-gradient-gold-shimmer bg-clip-text text-transparent mt-2"
               initial={{ opacity: 0, y: 30 }}
