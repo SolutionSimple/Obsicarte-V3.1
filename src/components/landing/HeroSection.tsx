@@ -10,7 +10,7 @@ export const HeroSection = () => {
   const [statsRef, statsInView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-br from-warmGray-50 via-beige-100 to-beige-200 overflow-hidden">
+    <section className="relative w-full min-h-screen bg-gradient-to-br from-beige-200 via-beige-300 to-warmGray-300 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/10 via-transparent to-transparent opacity-40" />
 
       <div className="absolute inset-0">

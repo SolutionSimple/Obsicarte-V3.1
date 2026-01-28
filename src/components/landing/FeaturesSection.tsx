@@ -35,7 +35,7 @@ export const FeaturesSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-beige-50 via-warmGray-50 to-beige-100">
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-beige-100 via-warmGray-200 to-beige-200">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />
@@ -71,12 +71,12 @@ export const FeaturesSection = () => {
                     <motion.div
                       className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-gold-md`}
                     >
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-8 h-8 text-black" />
                     </motion.div>
-                    <h3 className="text-2xl font-bold text-warmGray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-warmGray-50 mb-4">
                       {feature.title}
                     </h3>
-                    <p className="text-warmGray-700 text-lg leading-relaxed">
+                    <p className="text-warmGray-200 text-lg leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

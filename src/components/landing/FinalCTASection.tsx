@@ -24,7 +24,7 @@ export const FinalCTASection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-100 via-beige-100 to-warmGray-100 overflow-hidden">
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-200 via-beige-200 to-warmGray-200 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/20 via-transparent to-transparent" />
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-to-br from-gold-500/30 to-transparent rounded-full blur-3xl animate-pulse" />

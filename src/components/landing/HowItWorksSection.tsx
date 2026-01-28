@@ -28,7 +28,7 @@ export const HowItWorksSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-beige-100 via-warmGray-50 to-beige-50">
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-beige-200 via-warmGray-200 to-beige-100">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/10 via-transparent to-transparent opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

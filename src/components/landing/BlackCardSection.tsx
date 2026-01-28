@@ -32,7 +32,7 @@ export const BlackCardSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-100 via-beige-50 to-warmGray-100 overflow-hidden">
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-200 via-beige-200 to-warmGray-200 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/15 via-transparent to-transparent opacity-50" />
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-gold-500/20 to-transparent rounded-full blur-3xl" />
@@ -79,10 +79,10 @@ export const BlackCardSection = () => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-warmGray-900 mb-2">
+                        <h3 className="text-xl font-bold text-warmGray-50 mb-2">
                           {feature.title}
                         </h3>
-                        <p className="text-warmGray-700">
+                        <p className="text-warmGray-200">
                           {feature.description}
                         </p>
                       </div>
