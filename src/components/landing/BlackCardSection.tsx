@@ -32,7 +32,7 @@ export const BlackCardSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-200 via-beige-200 to-warmGray-200 overflow-hidden">
+    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-200 via-beige-200 to-warmGray-200 overflow-hidden font-montserrat">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/15 via-transparent to-transparent opacity-50" />
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-gold-500/20 to-transparent rounded-full blur-3xl" />
@@ -72,17 +72,17 @@ export const BlackCardSection = () => {
               return (
                 <motion.div key={feature.title} variants={staggerItem}>
                   <Card variant="dark-premium" hover={true} className="group">
-                    <div className="p-6 flex gap-4">
+                    <div className="p-5 flex gap-3">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Icon className="w-6 h-6 text-black" />
+                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <Icon className="w-5 h-5 text-black" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-warmGray-50 mb-2">
+                        <h3 className="text-lg font-bold text-warmGray-50 mb-1.5">
                           {feature.title}
                         </h3>
-                        <p className="text-warmGray-200">
+                        <p className="text-sm text-warmGray-200">
                           {feature.description}
                         </p>
                       </div>
