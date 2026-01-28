@@ -1,8 +1,7 @@
 import { Navbar } from '../components/landing/Navbar';
 import { HeroSection } from '../components/landing/HeroSection';
 import { BlackCardSection } from '../components/landing/BlackCardSection';
-import { FeaturesSection } from '../components/landing/FeaturesSection';
-import { TemplatesSection } from '../components/landing/TemplatesSection';
+import { UnifiedProfileSection } from '../components/landing/UnifiedProfileSection';
 import { HowItWorksSection } from '../components/landing/HowItWorksSection';
 import { FinalCTASection } from '../components/landing/FinalCTASection';
 import { Footer } from '../components/Footer';
@@ -15,8 +14,7 @@ export function LandingPage() {
       <main>
         <HeroSection />
         <BlackCardSection />
-        <FeaturesSection />
-        <TemplatesSection />
+        <UnifiedProfileSection />
         <HowItWorksSection />
         <FinalCTASection />
       </main>
