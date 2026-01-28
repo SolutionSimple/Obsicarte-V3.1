@@ -49,7 +49,7 @@ export const HeroSection = () => {
               transition={{ delay: 1.5, duration: 1.8, ease: [0.25, 0.1, 0.25, 1] }}
               className="text-lg md:text-xl text-warmGray-700 leading-relaxed"
             >
-              La carte de visite premium qui donne accès à votre profil virtuel illimité
+              La carte de visite premium qui donne accès à votre profil virtuel
             </motion.p>
 
             <motion.div
