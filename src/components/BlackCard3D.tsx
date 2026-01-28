@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Wifi } from 'lucide-react';
 import { useState } from 'react';
 import QRCode from 'react-qr-code';
+import obsiLogo from '../assets/or_avec_texte_no_bk.png';
 
 export const BlackCard3D = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -60,17 +61,12 @@ export const BlackCard3D = () => {
             <div className="absolute inset-0 bg-gradient-spotlight opacity-30" />
 
             <div className="relative h-full p-6 flex flex-col">
-              <div className="w-full h-12 bg-gradient-to-r from-neutral-800 to-neutral-900 -mx-6 mb-8" />
-
-              <div className="flex-1 flex flex-col items-center justify-center gap-6">
-                <div className="text-center space-y-4">
-                  <div className="text-gold-500 font-bold text-5xl tracking-wider">
-                    OBSI
-                  </div>
-                  <p className="text-warmGray-300 text-lg font-medium tracking-wide">
-                    Votre identité digitale
-                  </p>
-                </div>
+              <div className="flex-1 flex flex-col items-center justify-center">
+                <img
+                  src={obsiLogo}
+                  alt="OBSI - une Carte, un Geste, un Lien"
+                  className="w-64 h-auto object-contain"
+                />
               </div>
 
               <div className="flex items-center justify-center gap-2 text-warmGray-500 text-xs">
