@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Building2, GraduationCap, Palette, Landmark, Wifi } from 'lucide-react';
+import { Building2, GraduationCap, Palette, Landmark } from 'lucide-react';
 
 interface CardData {
   name: string;
@@ -75,7 +75,6 @@ const Card = ({ data, index }: { data: CardData; index: number }) => {
             <div className={`p-2 rounded-lg bg-gradient-to-br ${data.color}`}>
               <Icon className="w-5 h-5 text-white" />
             </div>
-            <Wifi className="w-6 h-6 text-gold-500 animate-pulse" />
           </div>
 
           <div className="flex-1" />
@@ -93,15 +92,6 @@ const Card = ({ data, index }: { data: CardData; index: number }) => {
             <p className="text-warmGray-300 text-sm">
               {data.title}
             </p>
-
-            <div className="pt-4 flex items-center gap-2">
-              <div className="flex-1 h-1 bg-neutral-800 rounded-full overflow-hidden">
-                <div className={`h-full w-2/3 bg-gradient-to-r ${data.color}`} />
-              </div>
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-                <span className="text-black font-bold text-xs">NFC</span>
-              </div>
-            </div>
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-gold-500/10 to-transparent rounded-full blur-3xl" />
