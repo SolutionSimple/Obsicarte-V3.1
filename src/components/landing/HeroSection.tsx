@@ -56,7 +56,6 @@ export const HeroSection = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 2, duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-              className="flex flex-col sm:flex-row gap-4"
             >
               <Link to="/signup">
                 <motion.button
@@ -65,15 +64,6 @@ export const HeroSection = () => {
                   className="px-10 py-4 bg-black text-white border-2 border-gold-500 rounded-lg text-lg font-medium shadow-gold-glow-lg hover:bg-neutral-900 transition-all duration-300"
                 >
                   Commander mon Obsi Carte
-                </motion.button>
-              </Link>
-              <Link to="/login">
-                <motion.button
-                  whileHover={{ scale: 1.02, backgroundColor: 'rgba(255, 255, 255, 1)' }}
-                  whileTap={{ scale: 0.98 }}
-                  className="px-10 py-4 bg-transparent text-warmGray-800 border-2 border-warmGray-800 rounded-lg text-lg font-medium hover:shadow-md transition-all duration-300"
-                >
-                  Voir une démo
                 </motion.button>
               </Link>
             </motion.div>
