@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Gem, Check, CreditCard, Palette } from 'lucide-react';
+import { Gem, Check, CreditCard, Palette, X } from 'lucide-react';
 import { Card, CardContent } from '../Card';
 import { Button } from '../Button';
 import { staggerContainerSlow, staggerItem } from '../../utils/animations';
@@ -113,23 +113,23 @@ export const PricingSection = () => {
 
                 <Card
                   variant="default"
-                  className={`h-full relative ${
+                  className={`relative ${
                     plan.highlighted
                       ? 'ring-2 ring-[#0F52BA]/50 shadow-xl transform scale-105'
                       : ''
                   }`}
                 >
-                  <CardContent className="p-8">
+                  <CardContent className="p-6">
                     <div className="flex flex-col items-center text-center mb-6">
-                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${plan.color} flex items-center justify-center mb-4 shadow-lg`}>
-                        <Icon className="w-10 h-10 text-white" />
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.color} flex items-center justify-center mb-4 shadow-lg`}>
+                        <Icon className="w-9 h-9 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-warmGray-900 mb-2">
                         {plan.name}
                       </h3>
                     </div>
 
-                    <div className="text-center mb-8">
+                    <div className="text-center mb-6">
                       <div className="flex items-baseline justify-center gap-1">
                         <span className="text-5xl font-bold text-gold-700">
                           {plan.price}
@@ -140,19 +140,6 @@ export const PricingSection = () => {
                         {plan.period}
                       </p>
                     </div>
-
-                    <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mt-0.5">
-                            <Check className="w-3 h-3 text-white" />
-                          </div>
-                          <span className="text-warmGray-700 leading-relaxed">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
 
                     <Button
                       variant={plan.highlighted ? "primary" : "secondary"}
@@ -165,6 +152,318 @@ export const PricingSection = () => {
               </motion.div>
             );
           })}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="max-w-5xl mx-auto mb-20"
+        >
+          <h3 className="text-3xl font-bold text-gold-700 text-center mb-10">
+            Comparaison détaillée
+          </h3>
+
+          <Card variant="glassmorphism" className="overflow-hidden">
+            <CardContent className="p-0">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-warmGray-200">
+                      <th className="text-left p-4 md:p-6 font-semibold text-warmGray-900 bg-warmGray-50/50">
+                        Fonctionnalités
+                      </th>
+                      <th className="text-center p-4 md:p-6 font-semibold text-warmGray-700 bg-warmGray-50/30">
+                        Pack Roc
+                      </th>
+                      <th className="text-center p-4 md:p-6 font-semibold text-[#0F52BA] bg-[#0F52BA]/5">
+                        Pack Saphir
+                      </th>
+                      <th className="text-center p-4 md:p-6 font-semibold text-emerald-700 bg-emerald-50/30">
+                        Pack Emeraude
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-warmGray-200">
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Profils personnalisés
+                      </td>
+                      <td className="p-4 md:p-6 text-center text-warmGray-700">
+                        1
+                      </td>
+                      <td className="p-4 md:p-6 text-center text-warmGray-700">
+                        3
+                      </td>
+                      <td className="p-4 md:p-6 text-center text-warmGray-700">
+                        Illimités
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Carte NFC premium
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Partage illimité
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        QR code dynamique
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Pitch vidéo intégré
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        CRM intégré
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Statistiques avancées
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Logo personnalisé sur carte
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Adhésion au club VIP
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Support prioritaire
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-warmGray-50/50 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                        Accès exclusif aux événements
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-400" />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-4 md:p-6 text-center">
+                        <div className="flex justify-center">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>
 
         <motion.div
