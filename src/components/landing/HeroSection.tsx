@@ -61,7 +61,7 @@ export const HeroSection = () => {
               className="block bg-gradient-gold-shimmer bg-clip-text text-transparent mt-2"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: -6 }}
+              transition={{ delay: 0.4, duration: 20}}
             >
               Un réseau infini.
             </motion.span>
