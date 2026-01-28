@@ -178,6 +178,105 @@ export interface ActivationBatch {
   created_at: string;
 }
 
+export interface UserRole {
+  id: string;
+  user_id: string;
+  role: 'customer' | 'admin' | 'reseller';
+  created_at: string;
+}
+
+export interface Card {
+  id: string;
+  card_code: string;
+  nfc_uid: string | null;
+  status: 'pending' | 'activated' | 'deactivated' | 'shipped';
+  profile_id: string | null;
+  tier: 'roc' | 'saphir' | 'emeraude';
+  order_id: string | null;
+  reseller_id: string | null;
+  activation_code: string;
+  activated_at: string | null;
+  shipped_at: string | null;
+  created_at: string;
+  metadata: Record<string, any>;
+}
+
+      user_roles: {
+        Row: UserRole;
+        Insert: Omit<UserRole, 'id' | 'created_at'>;
+        Update: Partial<Omit<UserRole, 'id' | 'created_at'>>;
+      };
+      cards: {
+        Row: Card;
+        Insert: Omit<Card, 'id' | 'created_at'>;
+        Update: Partial<Omit<Card, 'id' | 'created_at'>>;
+      };
+      orders: {
+        Row: Order;
+        Insert: Omit<Order, 'id' | 'created_at'>;
+        Update: Partial<Omit<Order, 'id' | 'created_at'>>;
+      };
+      resellers: {
+        Row: Reseller;
+        Insert: Omit<Reseller, 'id' | 'created_at' | 'updated_at'>;
+        Update: Partial<Omit<Reseller, 'id' | 'created_at' | 'updated_at'>>;
+      };
+      activation_batches: {
+        Row: ActivationBatch;
+        Insert: Omit<ActivationBatch, 'id' | 'created_at'>;
+        Update: Partial<Omit<ActivationBatch, 'id' | 'created_at'>>;
+      };
+export interface Order {
+  id: string;
+  order_number: string;
+  customer_email: string;
+  customer_name: string;
+  customer_phone: string | null;
+  shipping_address: {
+    street: string;
+    city: string;
+    postal_code: string;
+    country: string;
+  };
+  tier: 'roc' | 'saphir' | 'emeraude';
+  quantity: number;
+  total_amount: number;
+  status: 'pending' | 'confirmed' | 'shipped' | 'completed' | 'cancelled';
+  payment_status: 'pending' | 'succeeded' | 'failed' | 'refunded';
+  stripe_payment_intent_id: string | null;
+  stripe_customer_id: string | null;
+  user_id: string | null;
+  notes: string | null;
+  created_at: string;
+  confirmed_at: string | null;
+  shipped_at: string | null;
+}
+
+export interface Reseller {
+  id: string;
+  user_id: string;
+  company_name: string;
+  contact_email: string;
+  contact_phone: string | null;
+  commission_rate: number;
+  status: 'active' | 'suspended' | 'inactive';
+  total_sales: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ActivationBatch {
+  id: string;
+  batch_name: string;
+  tier: 'roc' | 'saphir' | 'emeraude';
+  cards_count: number;
+  status: 'draft' | 'ready' | 'assigned';
+  created_by: string;
+  assigned_to_reseller_id: string | null;
+  notes: string | null;
+  created_at: string;
+}
+
 export type Database = {
   public: {
     Tables: {

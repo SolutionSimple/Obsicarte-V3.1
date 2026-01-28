@@ -15,6 +15,12 @@ import { ActivateCard } from './pages/ActivateCard';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { AdminCards } from './pages/admin/AdminCards';
 import { AdminOrders } from './pages/admin/AdminOrders';
+import { OrderCard } from './pages/OrderCard';
+import { OrderConfirmation } from './pages/OrderConfirmation';
+import { ActivateCard } from './pages/ActivateCard';
+import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { AdminCards } from './pages/admin/AdminCards';
+import { AdminOrders } from './pages/admin/AdminOrders';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -101,6 +107,33 @@ function App() {
             />
             <Route
               path="/analytics"
+            <Route path="/order" element={<OrderCard />} />
+            <Route path="/order/confirmation" element={<OrderConfirmation />} />
+            <Route path="/activate" element={<ActivateCard />} />
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/cards"
+              element={
+                <ProtectedRoute>
+                  <AdminCards />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/orders"
+              element={
+                <ProtectedRoute>
+                  <AdminOrders />
+                </ProtectedRoute>
+              }
+            />
               element={
                 <ProtectedRoute>
                   <Analytics />
