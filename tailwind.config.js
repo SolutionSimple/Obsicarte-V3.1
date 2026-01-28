@@ -80,6 +80,14 @@ export default {
           'Arial',
           'sans-serif',
         ],
+        montserrat: [
+          'Montserrat',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'sans-serif',
+        ],
       },
       letterSpacing: {
         tighter: '-0.02em',

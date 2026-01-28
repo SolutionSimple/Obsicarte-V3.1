@@ -153,6 +153,14 @@
     border-bottom: 1px solid rgba(234, 179, 8, 0.15);
   }
 
+  .navbar-black {
+    background: #000000;
+    box-shadow:
+      0 1px 3px 0 rgba(0, 0, 0, 0.3),
+      0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   .glass-effect {
     background: rgba(250, 248, 245, 0.7);
     backdrop-filter: blur(16px);
