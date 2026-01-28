@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Button } from '../Button';
 import { CardRunwayAnimation } from '../CardRunwayAnimation';
-import { Wifi } from 'lucide-react';
-import { fadeInUpSlow } from '../../utils/animations';
 
 export const HeroSection = () => {
-  const [statsRef, statsInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-beige-200 via-beige-300 to-warmGray-300 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/10 via-transparent to-transparent opacity-40" />
@@ -82,7 +76,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.8, duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-32"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <Link to="/signup">
               <motion.button
@@ -102,47 +96,6 @@ export const HeroSection = () => {
                 Voir une démo
               </motion.button>
             </Link>
-          </motion.div>
-
-          <div className="relative flex justify-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ delay: 3.5, duration: 1.2 }}
-              className="w-24 h-1 bg-gradient-gold rounded-full"
-            />
-          </div>
-
-          <motion.div
-            ref={statsRef}
-            initial={{ opacity: 0 }}
-            animate={statsInView ? { opacity: 1 } : {}}
-            transition={{ delay: 4, duration: 1.5 }}
-            className="grid grid-cols-3 gap-12 max-w-4xl mx-auto mb-20"
-          >
-            {[
-              { value: '2.500+', label: 'Professionnels' },
-              { value: '100%', label: 'NFC' },
-              { value: '∞', label: 'Réseau illimité' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={statsInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 4.2 + index * 0.4, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-                className="text-center group p-8 rounded-2xl border-2 border-gold-500/30 hover:border-gold-500/60 transition-all duration-500 hover:shadow-gold-md"
-              >
-                <div className="relative inline-block">
-                  <div className="text-5xl md:text-6xl font-bold bg-gradient-gold-shimmer bg-clip-text text-transparent mb-3">
-                    {stat.value}
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500" />
-                </div>
-                <div className="text-base md:text-lg text-warmGray-600 uppercase tracking-wider font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
 
