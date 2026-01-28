@@ -21,13 +21,13 @@ export const BlackCardSection = () => {
     },
     {
       icon: Shield,
-      title: 'Design exclusif',
-      description: 'Accents dorés élégants, logo Obsi gravé',
+      title: 'Description vidéo',
+      description: 'Soyez pertinent et mémorable aux yeux de votre réseau',
     },
     {
       icon: Package,
       title: 'Livrée chez vous',
-      description: 'Emballage premium, livraison sous 48h',
+      description: 'livraison sous 72h maximum',
     },
   ];
 
