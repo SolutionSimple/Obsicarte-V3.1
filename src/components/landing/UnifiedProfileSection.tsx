@@ -53,7 +53,7 @@ export const UnifiedProfileSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-20 bg-gradient-to-b from-beige-100 via-warmGray-200 to-beige-200">
+    <section ref={ref} className="relative py-20">
       <div className="absolute inset-0 opacity-40">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl" />

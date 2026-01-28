@@ -4,7 +4,7 @@ import { CardRunwayAnimation } from '../CardRunwayAnimation';
 
 export const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-br from-beige-200 via-beige-300 to-warmGray-300 overflow-hidden">
+    <section className="relative w-full min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/10 via-transparent to-transparent opacity-40" />
 
       <div className="absolute inset-0">

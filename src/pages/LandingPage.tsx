@@ -8,7 +8,7 @@ import { Footer } from '../components/Footer';
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-beige-radial">
+    <div className="min-h-screen bg-gradient-to-b from-beige-200 via-warmGray-200 to-beige-200">
       <Navbar />
 
       <main>

@@ -70,7 +70,7 @@ export const PricingSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-beige-100 via-warmGray-100 to-beige-200">
+    <section ref={ref} className="relative py-32">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/10 via-transparent to-transparent opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +112,7 @@ export const PricingSection = () => {
                 )}
 
                 <Card
-                  variant="default"
+                  variant="dark-premium"
                   className={`relative ${
                     plan.highlighted
                       ? 'ring-2 ring-[#0F52BA]/50 shadow-xl transform scale-105'
@@ -124,7 +124,7 @@ export const PricingSection = () => {
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.color} flex items-center justify-center mb-4 shadow-lg`}>
                         <Icon className="w-9 h-9 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-warmGray-900 mb-2">
+                      <h3 className="text-2xl font-bold text-warmGray-50 mb-2">
                         {plan.name}
                       </h3>
                     </div>
@@ -134,9 +134,9 @@ export const PricingSection = () => {
                         <span className="text-5xl font-bold text-gold-700">
                           {plan.price}
                         </span>
-                        <span className="text-xl text-warmGray-600">€</span>
+                        <span className="text-xl text-warmGray-300">€</span>
                       </div>
-                      <p className="text-sm text-warmGray-600 mt-2">
+                      <p className="text-sm text-warmGray-300 mt-2">
                         {plan.period}
                       </p>
                     </div>
@@ -164,43 +164,43 @@ export const PricingSection = () => {
             Comparaison détaillée
           </h3>
 
-          <Card variant="glassmorphism" className="overflow-hidden">
+          <Card variant="dark-premium" className="overflow-hidden">
             <CardContent className="p-0">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="border-b border-warmGray-200">
-                      <th className="text-left p-4 md:p-6 font-semibold text-warmGray-900 bg-warmGray-50/50">
+                    <tr className="border-b border-neutral-700">
+                      <th className="text-left p-4 md:p-6 font-semibold text-warmGray-50 bg-neutral-800/30">
                         Fonctionnalités
                       </th>
-                      <th className="text-center p-4 md:p-6 font-semibold text-warmGray-700 bg-warmGray-50/30">
+                      <th className="text-center p-4 md:p-6 font-semibold text-warmGray-200 bg-neutral-800/30">
                         Pack Roc
                       </th>
-                      <th className="text-center p-4 md:p-6 font-semibold text-[#0F52BA] bg-[#0F52BA]/5">
+                      <th className="text-center p-4 md:p-6 font-semibold text-[#0F52BA] bg-[#0F52BA]/20">
                         Pack Saphir
                       </th>
-                      <th className="text-center p-4 md:p-6 font-semibold text-emerald-700 bg-emerald-50/30">
+                      <th className="text-center p-4 md:p-6 font-semibold text-emerald-400 bg-emerald-900/20">
                         Pack Emeraude
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-warmGray-200">
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                  <tbody className="divide-y divide-neutral-700">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Profils personnalisés
                       </td>
-                      <td className="p-4 md:p-6 text-center text-warmGray-700">
+                      <td className="p-4 md:p-6 text-center text-warmGray-200">
                         1
                       </td>
-                      <td className="p-4 md:p-6 text-center text-warmGray-700">
+                      <td className="p-4 md:p-6 text-center text-warmGray-200">
                         3
                       </td>
-                      <td className="p-4 md:p-6 text-center text-warmGray-700">
+                      <td className="p-4 md:p-6 text-center text-warmGray-200">
                         Illimités
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Carte NFC premium
                       </td>
                       <td className="p-4 md:p-6 text-center">
@@ -225,8 +225,8 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Partage illimité
                       </td>
                       <td className="p-4 md:p-6 text-center">
@@ -251,8 +251,8 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         QR code dynamique
                       </td>
                       <td className="p-4 md:p-6 text-center">
@@ -277,14 +277,14 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Pitch vidéo intégré
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
@@ -303,14 +303,14 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         CRM intégré
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
@@ -329,14 +329,14 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Statistiques avancées
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
@@ -355,21 +355,21 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Logo personnalisé sur carte
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
@@ -381,21 +381,21 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Adhésion au club VIP
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
@@ -407,21 +407,21 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Support prioritaire
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
@@ -433,21 +433,21 @@ export const PricingSection = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="hover:bg-warmGray-50/50 transition-colors">
-                      <td className="p-4 md:p-6 text-warmGray-700 font-medium">
+                    <tr className="hover:bg-neutral-800/30 transition-colors">
+                      <td className="p-4 md:p-6 text-warmGray-100 font-medium">
                         Accès exclusif aux événements
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
                       <td className="p-4 md:p-6 text-center">
                         <div className="flex justify-center">
-                          <div className="w-6 h-6 rounded-full bg-warmGray-200 flex items-center justify-center">
-                            <X className="w-4 h-4 text-warmGray-400" />
+                          <div className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center">
+                            <X className="w-4 h-4 text-warmGray-500" />
                           </div>
                         </div>
                       </td>
@@ -483,8 +483,8 @@ export const PricingSection = () => {
               return (
                 <Card
                   key={service.name}
-                  variant="glassmorphism"
-                  className="transition-all duration-300 hover:shadow-gold-md"
+                  variant="glassmorphism-dark"
+                  className="transition-all duration-300 hover:shadow-gold-glow"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
@@ -492,7 +492,7 @@ export const PricingSection = () => {
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-warmGray-900 mb-1">
+                        <h4 className="font-semibold text-warmGray-50 mb-1">
                           {service.name}
                         </h4>
                         <p className="text-2xl font-bold text-gold-700">

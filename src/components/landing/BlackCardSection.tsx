@@ -32,7 +32,7 @@ export const BlackCardSection = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-32 bg-gradient-to-b from-warmGray-200 via-beige-200 to-warmGray-200 overflow-hidden font-montserrat">
+    <section ref={ref} className="relative py-32 overflow-hidden font-montserrat">
       <div className="absolute inset-0 bg-gradient-radial from-gold-400/15 via-transparent to-transparent opacity-50" />
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-gold-500/20 to-transparent rounded-full blur-3xl" />
