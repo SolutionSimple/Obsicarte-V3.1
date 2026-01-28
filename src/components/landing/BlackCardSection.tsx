@@ -11,13 +11,13 @@ export const BlackCardSection = () => {
   const features = [
     {
       icon: Sparkles,
-      title: 'Matériau premium',
-      description: 'Carte PVC noir mat de haute qualité, finition soft-touch',
+      title: 'Différents Profils',
+      description: 'Donnez de la visibilité à tout vos projets en même temps',
     },
     {
       icon: Zap,
       title: 'Puce NFC intégrée',
-      description: 'Pré-configurée et prête à l\'emploi, aucune configuration nécessaire',
+      description: 'Pour facilité l'échange de coordonées,
     },
     {
       icon: Shield,
