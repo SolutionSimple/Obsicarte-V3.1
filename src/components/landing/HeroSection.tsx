@@ -46,7 +46,7 @@ export const HeroSection = () => {
           >
             <Wifi className="w-4 h-4 text-gold-600 animate-pulse" />
             <span className="text-gold-700 text-sm font-semibold tracking-wide">
-              Creez un reseau avec classe
+              Creez du lien, partagez vos informations en un geste 
             </span>
           </motion.div>
 
