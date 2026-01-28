@@ -45,7 +45,7 @@ export const BlackCardSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-gold-700 mb-6 tracking-tight">
-            La carte noire premium
+            La carte qu'il vous faut,
           </h2>
           <p className="text-xl md:text-2xl text-warmGray-700 max-w-3xl mx-auto">
             Une carte qui fait la différence
