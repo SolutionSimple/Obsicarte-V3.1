@@ -2,7 +2,7 @@ import { Navbar } from '../components/landing/Navbar';
 import { HeroSection } from '../components/landing/HeroSection';
 import { BlackCardSection } from '../components/landing/BlackCardSection';
 import { UnifiedProfileSection } from '../components/landing/UnifiedProfileSection';
-import { HowItWorksSection } from '../components/landing/HowItWorksSection';
+import { PricingSection } from '../components/landing/PricingSection';
 import { FinalCTASection } from '../components/landing/FinalCTASection';
 import { Footer } from '../components/Footer';
 
@@ -15,7 +15,7 @@ export function LandingPage() {
         <HeroSection />
         <BlackCardSection />
         <UnifiedProfileSection />
-        <HowItWorksSection />
+        <PricingSection />
         <FinalCTASection />
       </main>
 
