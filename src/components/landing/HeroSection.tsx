@@ -44,7 +44,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="inline-flex items-center gap-2 bg-gold-500/15 border border-gold-500/40 rounded-full px-5 py-2.5 mb-8 shadow-gold-md"
           >
-            <Wifi className="w-4 h-4 text-gold-600 animate-pulse" />
+            
             <span className="text-gold-700 text-sm font-semibold tracking-wide">
               Creez du lien, partagez vos informations en un geste 
             </span>
