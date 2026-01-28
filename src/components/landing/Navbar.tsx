@@ -46,13 +46,13 @@ export const Navbar = () => {
                 Se connecter
               </motion.button>
             </Link>
-            <Link to="/signup">
+            <Link to="/order">
               <motion.button
                 whileHover={{ scale: 1.02, boxShadow: '0 0 20px rgba(255, 255, 255, 0.5)' }}
                 whileTap={{ scale: 0.98 }}
                 className="px-5 py-2 bg-white text-black hover:bg-white/90 transition-all duration-300 rounded-full font-medium shadow-md text-sm"
               >
-                Commencer
+                Commander
               </motion.button>
             </Link>
           </div>

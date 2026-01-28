@@ -1,13 +1,14 @@
-import { useState, FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, FormEvent, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useProfile } from '../hooks/useProfile';
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 import { TemplateSelectorStep } from '../components/TemplateSelectorStep';
 import type { ProfileTemplate } from '../types/custom-fields.types';
-import { Sparkles, ArrowLeft } from 'lucide-react';
+import { Sparkles, ArrowLeft, CheckCircle } from 'lucide-react';
 
 export function Onboarding() {
+  const [searchParams] = useSearchParams();
   const [step, setStep] = useState<'template' | 'details'>('template');
   const [selectedTemplate, setSelectedTemplate] = useState<ProfileTemplate | null>(null);
   const [username, setUsername] = useState('');
@@ -17,8 +18,26 @@ export function Onboarding() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [fromActivation, setFromActivation] = useState(false);
   const { createProfile } = useProfile();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const emailParam = searchParams.get('email');
+    const nameParam = searchParams.get('name');
+    const phoneParam = searchParams.get('phone');
+
+    if (emailParam) {
+      setEmail(emailParam);
+      setFromActivation(true);
+    }
+    if (nameParam) {
+      setFullName(nameParam);
+    }
+    if (phoneParam) {
+      setPhone(phoneParam);
+    }
+  }, [searchParams]);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -105,6 +124,16 @@ export function Onboarding() {
             Retour
           </button>
         </div>
+
+        {fromActivation && (
+          <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="text-sm font-medium text-green-900">Carte activée avec succès !</p>
+              <p className="text-sm text-green-700 mt-1">Complétez votre profil pour finaliser la configuration</p>
+            </div>
+          </div>
+        )}
 
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">

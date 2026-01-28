@@ -57,7 +57,7 @@ export const HeroSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 2, duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <Link to="/signup">
+              <Link to="/order">
                 <motion.button
                   whileHover={{ scale: 1.02, boxShadow: '0 0 32px rgba(234, 179, 8, 0.6)' }}
                   whileTap={{ scale: 0.98 }}
