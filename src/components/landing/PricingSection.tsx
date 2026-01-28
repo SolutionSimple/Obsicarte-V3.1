@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Medal, Gem, Crown, Check, CreditCard, Palette } from 'lucide-react';
+import { Gem, Check, CreditCard, Palette } from 'lucide-react';
 import { Card, CardContent } from '../Card';
 import { Button } from '../Button';
 import { staggerContainerSlow, staggerItem } from '../../utils/animations';
@@ -11,7 +11,7 @@ export const PricingSection = () => {
   const pricingPlans = [
     {
       name: 'Pack Roc',
-      icon: Medal,
+      icon: Gem,
       price: '19,90',
       period: '/mois pendant 1 an',
       features: [
@@ -21,7 +21,7 @@ export const PricingSection = () => {
         'QR code dynamique',
       ],
       highlighted: false,
-      color: 'from-warmGray-600 to-warmGray-800',
+      color: 'from-gray-500 to-gray-700',
     },
     {
       name: 'Pack Saphir',
@@ -37,11 +37,11 @@ export const PricingSection = () => {
       ],
       highlighted: true,
       recommended: true,
-      color: 'from-blue-600 to-blue-800',
+      color: 'from-[#0F52BA] to-[#0a3a8a]',
     },
     {
       name: 'Pack Emeraude',
-      icon: Crown,
+      icon: Gem,
       price: '34,90',
       period: '/mois pendant 1 an',
       features: [
@@ -112,10 +112,10 @@ export const PricingSection = () => {
                 )}
 
                 <Card
-                  variant={plan.highlighted ? "premium" : "default"}
+                  variant="default"
                   className={`h-full relative ${
                     plan.highlighted
-                      ? 'ring-2 ring-gold-500/50 shadow-gold-lg transform scale-105'
+                      ? 'ring-2 ring-[#0F52BA]/50 shadow-xl transform scale-105'
                       : ''
                   }`}
                 >
