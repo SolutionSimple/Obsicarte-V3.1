@@ -58,15 +58,34 @@ export const BlackCard3D = () => {
           }}
         >
           <div className="w-full h-full rounded-2xl bg-gradient-to-br from-neutral-950 via-black to-neutral-900 border-2 border-gold-600/30 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-spotlight opacity-30" />
+            <div className="absolute inset-0 bg-gradient-spotlight opacity-50" />
+
+            <div
+              className="absolute inset-0 flex items-center justify-center"
+              style={{
+                background: 'radial-gradient(circle at center, rgba(202, 138, 4, 0.15) 0%, transparent 60%)'
+              }}
+            />
 
             <div className="relative h-full p-6 flex flex-col">
               <div className="flex-1 flex flex-col items-center justify-center">
-                <img
-                  src={obsiLogo}
-                  alt="OBSI - une Carte, un Geste, un Lien"
-                  className="w-64 h-auto object-contain"
-                />
+                <div className="relative">
+                  <div
+                    className="absolute inset-0 blur-2xl opacity-60"
+                    style={{
+                      background: 'radial-gradient(circle, rgba(202, 138, 4, 0.4) 0%, transparent 70%)',
+                      transform: 'scale(1.2)'
+                    }}
+                  />
+                  <img
+                    src={obsiLogo}
+                    alt="OBSI - une Carte, un Geste, un Lien"
+                    className="w-64 h-auto object-contain relative z-10"
+                    style={{
+                      filter: 'drop-shadow(0 0 20px rgba(202, 138, 4, 0.5)) drop-shadow(0 0 40px rgba(202, 138, 4, 0.3))'
+                    }}
+                  />
+                </div>
               </div>
 
               <div className="flex items-center justify-center gap-2 text-warmGray-500 text-xs">
