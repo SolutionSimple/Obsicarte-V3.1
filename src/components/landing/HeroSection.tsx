@@ -46,7 +46,7 @@ export const HeroSection = () => {
           >
             
             <span className="text-gold-700 text-sm font-semibold tracking-wide">
-              Creez du lien, partagez vos informations en un geste 
+              Creez du lien & Partagez vos informations en un geste 
             </span>
           </motion.div>
 
