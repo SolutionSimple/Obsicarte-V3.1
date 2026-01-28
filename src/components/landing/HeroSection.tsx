@@ -39,7 +39,7 @@ export const HeroSection = () => {
               transition={{ duration: 1.8, delay: 1 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 tracking-tight leading-tight">
-                Creez du lien & Partagez vos informations en un geste
+                Créez du lien & Partagez vos informations en un geste
               </h1>
             </motion.div>
 
@@ -49,7 +49,7 @@ export const HeroSection = () => {
               transition={{ delay: 1.5, duration: 1.8, ease: [0.25, 0.1, 0.25, 1] }}
               className="text-lg md:text-xl text-warmGray-700 leading-relaxed"
             >
-              La carte de visite premium qui donne accès à votre profil virtuel
+              La carte de visite premium connectée à votre profil virtuel
             </motion.p>
 
             <motion.div
