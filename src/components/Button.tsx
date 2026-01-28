@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'danger' | 'gold' | 'gold-outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'danger' | 'gold' | 'gold-outline' | 'black-gold';
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
   loading?: boolean;
@@ -30,6 +30,7 @@ export function Button({
     danger: 'bg-red-600 hover:bg-red-700 text-white shadow-premium-md',
     gold: 'bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-black shadow-gold-lg hover:shadow-gold-glow font-bold transition-all duration-300',
     'gold-outline': 'border-2 border-gold-500/50 hover:border-gold-500 text-gold-400 hover:text-gold-300 hover:bg-gold-500/10 shadow-gold-sm hover:shadow-gold-md transition-all duration-300',
+    'black-gold': 'bg-black border-2 border-gold-500 text-white hover:bg-neutral-900 hover:shadow-gold-glow transition-all duration-300',
   };
 
   const sizes = {

@@ -152,20 +152,20 @@ export function ProfileEditor() {
 
   if (!profile) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin h-12 w-12 border-4 border-blue-600 border-t-transparent rounded-full" />
+      <div className="min-h-screen bg-gradient-to-b from-beige-200 via-warmGray-200 to-beige-200 flex items-center justify-center">
+        <div className="animate-spin h-12 w-12 border-4 border-gold-600 border-t-transparent rounded-full" />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-warmGray-50">
-      <nav className="bg-white border-b border-warmGray-200">
+    <div className="min-h-screen bg-gradient-to-b from-beige-200 via-warmGray-200 to-beige-200">
+      <nav className="bg-white border-b border-gold-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <button
               onClick={() => navigate('/dashboard')}
-              className="flex items-center gap-2 text-warmGray-700 hover:text-warmGray-900"
+              className="flex items-center gap-2 text-warmGray-700 hover:text-gold-600 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
               Retour au tableau de bord
@@ -232,7 +232,7 @@ export function ProfileEditor() {
                       value={formData.bio}
                       onChange={(e) => handleChange('bio', e.target.value)}
                       rows={4}
-                      className="w-full px-4 py-2 border border-warmGray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-warmGray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent"
                       placeholder="Parlez de vous..."
                     />
                   </div>
@@ -289,7 +289,7 @@ export function ProfileEditor() {
                       onChange={(e) => handleChange('tagline', e.target.value)}
                       maxLength={100}
                       placeholder="Une phrase courte et percutante..."
-                      className="w-full px-4 py-2 border border-warmGray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-warmGray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent"
                     />
                     <div className="text-xs text-warmGray-500 mt-1">
                       {formData.tagline.length}/100 caractères
@@ -305,7 +305,7 @@ export function ProfileEditor() {
                       onChange={(e) => handleChange('mission_statement', e.target.value)}
                       maxLength={500}
                       rows={6}
-                      className="w-full px-4 py-2 border border-warmGray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-warmGray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent"
                       placeholder="Décrivez votre mission, vos valeurs, ce qui vous anime..."
                     />
                     <div className="text-xs text-warmGray-500 mt-1">
@@ -341,7 +341,7 @@ export function ProfileEditor() {
                         setFormData(prev => ({ ...prev, show_local_time: e.target.checked }));
                         setSaveMessage('Enregistrement...');
                       }}
-                      className="w-4 h-4 text-blue-600 border-warmGray-300 rounded focus:ring-blue-500"
+                      className="w-4 h-4 text-gold-600 border-warmGray-300 rounded focus:ring-gold-500"
                     />
                     <span className="text-sm text-warmGray-700">
                       Afficher mon heure locale sur le profil
@@ -393,7 +393,7 @@ export function ProfileEditor() {
                         setFormData(prev => ({ ...prev, is_online: e.target.checked }));
                         setSaveMessage('Enregistrement...');
                       }}
-                      className="w-4 h-4 text-blue-600 border-warmGray-300 rounded focus:ring-blue-500"
+                      className="w-4 h-4 text-gold-600 border-warmGray-300 rounded focus:ring-gold-500"
                     />
                     <span className="text-sm text-warmGray-700">
                       Afficher comme en ligne (badge vert sur la photo de profil)
@@ -454,7 +454,7 @@ export function ProfileEditor() {
               <h2 className="text-2xl font-bold text-warmGray-900 mb-4">Aperçu en direct</h2>
               <p className="text-sm text-warmGray-500 mb-6">Voici à quoi ressemble votre profil pour les visiteurs</p>
 
-              <div className="bg-gradient-to-br from-blue-50 to-warmGray-50 rounded-lg p-6 border border-warmGray-200">
+              <div className="bg-gradient-to-br from-gold-50 to-warmGray-50 rounded-lg p-6 border border-gold-500/20">
                 {formData.profile_photo_url ? (
                   <div className="flex justify-center mb-4">
                     <img
@@ -465,7 +465,7 @@ export function ProfileEditor() {
                   </div>
                 ) : (
                   <div className="flex justify-center mb-4">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold">
+                    <div className="w-24 h-24 bg-gradient-gold rounded-full flex items-center justify-center text-black text-3xl font-bold">
                       {formData.full_name.charAt(0) || '?'}
                     </div>
                   </div>
@@ -498,7 +498,7 @@ export function ProfileEditor() {
                   {formData.website && (
                     <div className="bg-white rounded-lg p-3 text-sm">
                       <span className="text-warmGray-500">Site web : </span>
-                      <span className="text-blue-600">{formData.website}</span>
+                      <span className="text-gold-600">{formData.website}</span>
                     </div>
                   )}
                 </div>
@@ -507,10 +507,10 @@ export function ProfileEditor() {
                   <div className="mt-4 pt-4 border-t border-warmGray-200">
                     <p className="text-xs text-center text-warmGray-500 mb-2">RÉSEAUX SOCIAUX</p>
                     <div className="flex justify-center gap-2 flex-wrap">
-                      {formData.linkedin && <span className="px-2 py-1 bg-blue-100 text-navy-700 rounded text-xs">LinkedIn</span>}
-                      {formData.twitter && <span className="px-2 py-1 bg-sky-100 text-sky-800 rounded text-xs">Twitter</span>}
-                      {formData.instagram && <span className="px-2 py-1 bg-pink-100 text-pink-800 rounded text-xs">Instagram</span>}
-                      {formData.facebook && <span className="px-2 py-1 bg-indigo-100 text-indigo-800 rounded text-xs">Facebook</span>}
+                      {formData.linkedin && <span className="px-2 py-1 bg-gold-100 text-gold-800 rounded text-xs">LinkedIn</span>}
+                      {formData.twitter && <span className="px-2 py-1 bg-gold-100 text-gold-800 rounded text-xs">Twitter</span>}
+                      {formData.instagram && <span className="px-2 py-1 bg-gold-100 text-gold-800 rounded text-xs">Instagram</span>}
+                      {formData.facebook && <span className="px-2 py-1 bg-gold-100 text-gold-800 rounded text-xs">Facebook</span>}
                     </div>
                   </div>
                 )}
@@ -520,7 +520,7 @@ export function ProfileEditor() {
                 <Button
                   fullWidth
                   onClick={() => navigate(`/${profile.username}`)}
-                  variant="outline"
+                  variant="black-gold"
                 >
                   Voir le profil complet
                 </Button>

@@ -31,9 +31,9 @@ export function Dashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-b from-beige-200 via-warmGray-200 to-beige-200 flex items-center justify-center">
         <motion.div
-          className="h-12 w-12 border-4 border-amber-500 border-t-transparent rounded-full"
+          className="h-12 w-12 border-4 border-gold-500 border-t-transparent rounded-full"
           animate={{ rotate: 360 }}
           transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
         />
@@ -98,17 +98,17 @@ export function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-gradient-to-b from-beige-200 via-warmGray-200 to-beige-200">
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="bg-white/95 backdrop-blur-md border-b border-neutral-200 sticky top-0 z-50 shadow-premium-sm"
+        className="bg-white/95 backdrop-blur-md border-b border-gold-500/20 sticky top-0 z-50 shadow-premium-sm"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <h1 className="text-xl font-bold bg-gradient-amber bg-clip-text text-transparent">Ma carte numérique</h1>
-            <Button variant="outline" size="sm" onClick={() => signOut()}>
+            <h1 className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">Ma carte numérique</h1>
+            <Button variant="black-gold" size="sm" onClick={() => signOut()}>
               <LogOut className="w-4 h-4 mr-2" />
               Déconnexion
             </Button>
@@ -120,10 +120,10 @@ export function Dashboard() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8 p-6 bg-gradient-to-r from-amber-50 to-transparent border border-amber-200 rounded-xl"
+          className="mb-8 p-6 bg-gradient-to-r from-gold-50 to-transparent border border-gold-500/20 rounded-xl"
         >
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 bg-gradient-amber rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-5 h-5 text-black" />
             </div>
             <div className="flex-1">
@@ -164,7 +164,7 @@ export function Dashboard() {
                   <div className="flex items-center justify-between mb-6">
                     <h2 className="text-2xl font-bold text-neutral-900">Aperçu de votre carte</h2>
                     <Link to="/edit">
-                      <Button variant="outline">
+                      <Button variant="black-gold">
                         <Edit className="w-4 h-4 mr-2" />
                         Modifier
                       </Button>
@@ -173,14 +173,14 @@ export function Dashboard() {
 
                   <CardPreview3D profile={profile} className="mb-6" />
 
-                  <div className="mt-6 pt-6 border-t border-neutral-200 flex gap-3">
+                  <div className="mt-6 pt-6 border-t border-gold-500/20 flex gap-3">
                     <Link to={`/${profile.username}`} className="flex-1">
-                      <Button variant="outline" fullWidth>
+                      <Button variant="black-gold" fullWidth>
                         <Eye className="w-4 h-4 mr-2" />
                         Aperçu
                       </Button>
                     </Link>
-                    <Button variant="outline" onClick={handleShare} fullWidth>
+                    <Button variant="black-gold" onClick={handleShare} fullWidth>
                       <Share2 className="w-4 h-4 mr-2" />
                       Partager
                     </Button>
@@ -195,7 +195,7 @@ export function Dashboard() {
                   <div className="flex items-center justify-between mb-6">
                     <h2 className="text-xl font-bold text-neutral-900">Statistiques en temps réel</h2>
                     <Link to="/analytics">
-                      <Button variant="outline" size="sm">
+                      <Button variant="black-gold" size="sm">
                         <BarChart3 className="w-4 h-4 mr-2" />
                         Voir détails
                       </Button>
@@ -205,30 +205,30 @@ export function Dashboard() {
                   <div className="grid grid-cols-3 gap-4">
                     <motion.div
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className="text-center p-6 bg-gradient-to-br from-amber-50 to-white rounded-xl border border-amber-200 shadow-premium-md"
+                      className="text-center p-6 bg-gradient-to-br from-gold-50 to-white rounded-xl border border-gold-500/30 shadow-premium-md"
                     >
-                      <TrendingUp className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-                      <p className="text-4xl font-bold text-amber-600">
+                      <TrendingUp className="w-6 h-6 text-gold-600 mx-auto mb-2" />
+                      <p className="text-4xl font-bold text-gold-600">
                         <AnimatedCounter value={analytics?.totalViews || profile.view_count || 0} duration={1.5} />
                       </p>
                       <p className="text-sm text-neutral-600 mt-2">Vues totales</p>
                     </motion.div>
                     <motion.div
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className="text-center p-6 bg-gradient-to-br from-amber-50 to-white rounded-xl border border-amber-200 shadow-premium-md"
+                      className="text-center p-6 bg-gradient-to-br from-gold-50 to-white rounded-xl border border-gold-500/30 shadow-premium-md"
                     >
-                      <Users className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-                      <p className="text-4xl font-bold text-amber-600">
+                      <Users className="w-6 h-6 text-gold-600 mx-auto mb-2" />
+                      <p className="text-4xl font-bold text-gold-600">
                         <AnimatedCounter value={analytics?.totalDownloads || 0} duration={1.5} />
                       </p>
                       <p className="text-sm text-neutral-600 mt-2">Téléchargements</p>
                     </motion.div>
                     <motion.div
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className="text-center p-6 bg-gradient-to-br from-amber-50 to-white rounded-xl border border-amber-200 shadow-premium-md"
+                      className="text-center p-6 bg-gradient-to-br from-gold-50 to-white rounded-xl border border-gold-500/30 shadow-premium-md"
                     >
-                      <MousePointerClick className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-                      <p className="text-4xl font-bold text-amber-600">
+                      <MousePointerClick className="w-6 h-6 text-gold-600 mx-auto mb-2" />
+                      <p className="text-4xl font-bold text-gold-600">
                         <AnimatedCounter value={analytics?.totalLinkClicks || 0} duration={1.5} />
                       </p>
                       <p className="text-sm text-neutral-600 mt-2">Clics</p>
@@ -257,7 +257,7 @@ export function Dashboard() {
 
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="bg-white p-6 rounded-lg border-2 border-amber-500 flex items-center justify-center shadow-amber-glow"
+                    className="bg-white p-6 rounded-lg border-2 border-gold-500 flex items-center justify-center shadow-gold-glow-lg"
                   >
                     <QRCode
                       id="qr-code"
@@ -268,12 +268,12 @@ export function Dashboard() {
                   </motion.div>
 
                   <div className="mt-4 space-y-2">
-                    <Button fullWidth variant="secondary" onClick={() => handleDownloadQR('standard')}>
+                    <Button fullWidth variant="black-gold" onClick={() => handleDownloadQR('standard')}>
                       <Download className="w-4 h-4 mr-2" />
                       Télécharger (Standard)
                     </Button>
 
-                    <Button fullWidth variant="outline" onClick={() => handleDownloadQR('high')}>
+                    <Button fullWidth variant="black-gold" onClick={() => handleDownloadQR('high')}>
                       <Download className="w-4 h-4 mr-2" />
                       Télécharger (Haute résolution)
                     </Button>
@@ -289,12 +289,12 @@ export function Dashboard() {
             <motion.div variants={staggerItem}>
               <Card variant="default" className="bg-white border-neutral-200">
                 <CardContent>
-                  <h3 className="font-semibold text-amber-600 mb-2">URL de votre profil</h3>
+                  <h3 className="font-semibold text-gold-600 mb-2">URL de votre profil</h3>
                   <p className="text-sm text-neutral-600 break-all mb-3">{profileUrl}</p>
                   <Button
                     size="sm"
                     fullWidth
-                    variant="outline"
+                    variant="black-gold"
                     onClick={() => {
                       navigator.clipboard.writeText(profileUrl);
                       alert('Lien copié !');
@@ -307,10 +307,10 @@ export function Dashboard() {
             </motion.div>
 
             <motion.div variants={staggerItem}>
-              <Card variant="default" className="bg-gradient-to-br from-amber-50 to-white border-amber-200">
+              <Card variant="default" className="bg-gradient-to-br from-gold-50 to-white border-gold-500/20">
                 <CardContent>
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 bg-gradient-amber rounded-full flex items-center justify-center shadow-amber-glow flex-shrink-0">
+                    <div className="w-10 h-10 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold-glow flex-shrink-0">
                       <Nfc className="w-5 h-5 text-black" />
                     </div>
                     <div>
@@ -321,7 +321,7 @@ export function Dashboard() {
                   <p className="text-sm text-neutral-600 mb-3 leading-relaxed">
                     Votre carte NFC physique sera pré-configurée avec votre profil et livrée prête à utiliser. Aucune manipulation technique nécessaire.
                   </p>
-                  <div className="bg-white rounded-lg p-3 border border-amber-200">
+                  <div className="bg-white rounded-lg p-3 border border-gold-500/20">
                     <p className="text-xs text-neutral-700 font-medium mb-2">Comment ça marche ?</p>
                     <ul className="text-xs text-neutral-600 space-y-1">
                       <li>✓ Nous configurons votre carte avec votre profil</li>
